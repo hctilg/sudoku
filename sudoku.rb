@@ -105,12 +105,10 @@ puts "3) Hard"
 print "\nSelect: "
 difficulty = gets.strip
 
-# percent = (filled.to_f / size) * 100 --> filled = (percent * size) / 100
-
 empty_cells = case difficulty
-  when '1' then (35 * size) / 100
-  when '2' then (45 * size) / 100
-  else ((55 * size) / 100 ) + 1
+  when '1' then (35 * size) / 100  #  35%
+  when '2' then (45 * size) / 100  #  45%
+  else ((55 * size) / 100 ) + 1    # ~55%
 end
 
 complete = generate_complete_sudoku()
